@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{title}"></title>
+</head>
+<body>
+    <!--<h1 th:if="${f=='true'}">1</h1>-->
+    <!--<h1 th:if="${f=='false'}">2</h1>-->
+    <!--<div th:insert="~{footer :: copy}"></div>-->
+
+    shijian<span th:text="${#dates.format(date,'yyyy-MM-dd HH:mm:ss')}">456</span>
+    <span th:text="${#numbers.formatDecimal(price,1,2)}">123</span>
+    <p th:text="${#strings.abbreviate(strText,60)}"></p>
+    <span th:if="${#strings.isEmpty(str2)}">字符串 str2 不为空</span>
+    <span th:text="${#strings.substring(str2,0,2)}"></span>
+</body>
+</html>
